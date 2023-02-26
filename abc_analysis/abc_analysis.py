@@ -260,12 +260,6 @@ def abc_analysis(psData: Any,
         raise ValueError('Not enough input')
 
     # reset indices to numeric values
-    # save index for future use, try not removing the index
-    index_name = psData.index.name
-    if index_name is None:
-        index_name = 'index'
-    # psData = psData.reset_index()
-    # index = psData[index_name].copy()
     # psData.drop(columns=index_name, inplace=True)
 
     # interpolate input vector
@@ -310,7 +304,6 @@ def abc_analysis(psData: Any,
     # calculate AB-limit and BC-limit in raw units of input vector (e.g. euro)
     psCleaned = abc_clean_data(psData)
     psSorted = psCleaned.sort_values(ascending=False).reset_index(drop=True)
-    # psSorted = psCleaned.sort_values(ascending=False).reset_index()
     ABLimit = psSorted[round(A * len(psData)) - 1]
     BCLimit = psSorted[round(C * len(psData)) - 1]
 
