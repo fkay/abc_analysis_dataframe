@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
 
-setup(name='abc_analysis',
-      version='0.1.21',
-      project_urls={'Viessmann': 'https://www.linkedin.com/company/viessmann/', 
+setup(name='abc_analysis_dataframe',
+      version='0.1.22a1',
+      project_urls={'Viessmann': 'https://www.linkedin.com/company/viessmann/',
                     'Source': 'https://github.com/viessmann/abc_analysis'},
       description='ABC analysis with automated limit detection',
       long_description=open('readme_pypi.rst').read(),
-      download_url='https://github.com/viessmann/abc_analysis/archive/v0.1.21.tar.gz',
+      download_url='https://github.com/viessmann/abc_analysis/archive/v0.1.21.tar.gz',  # noqa
       classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
@@ -23,10 +23,10 @@ setup(name='abc_analysis',
       license='GNU General Public License v3 (GPLv3)',
       packages=find_packages(),
       install_requires=[
-         'pandas>=0.22',
-		  'numpy>=1.14',
-         'scipy>=1.1.0',
-		  'matplotlib>=2.2.2'
+        'pandas>=0.22',
+        'numpy>=1.14',
+        'scipy>=1.1.0',
+        'matplotlib>=2.2.2'
       ],
       include_package_data=True,
       zip_safe=False)

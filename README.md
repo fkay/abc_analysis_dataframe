@@ -1,4 +1,8 @@
-# ABC analysis
+# ABC analysis dataframe
+
+Modification over original project from Viessmann, maintaining original index from Series.
+Optionally can pass a Pandas Dataframe with a column name for the analysis, and a new
+column named 'abc_class' will be added to the Dataframe with the classification of itens with values 'A', 'B' or 'C'
 
 Performs and visualizes an ABC analysis with automated limit detection. 
 
